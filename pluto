@@ -1,0 +1,15 @@
+#!/usr/bin/env bash
+
+if [ $# -eq 0 ]
+  then
+    julia -e "using Pluto; Pluto.run()"
+elif [ $# -eq 1 ]
+  then
+    julia -e "using Pluto;Pluto.run(notebook=\"$1\")"
+else
+    echo "Error: too many arguments. 'pluto' takes zero or one arguments." 
+    echo "Usage:"
+    echo "    \$pluto <filename.jl>"
+    exit 1
+fi
+
