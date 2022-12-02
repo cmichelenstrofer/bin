@@ -1,0 +1,9 @@
+#!/usr/bin/env bash
+
+for EXT in aux lof log lol lot toc bbl blg dep brf idx ilg ind out synctex.gz
+do
+    rm -rf $1.$EXT
+done
+
+# rm -rf $1.pdf
+
