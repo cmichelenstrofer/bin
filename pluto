@@ -5,7 +5,7 @@ if [ $# -eq 0 ]
     julia -e "using Pluto; Pluto.run()"
 elif [ $# -eq 1 ]
   then
-    julia -e "using Pluto;Pluto.run(notebook=\"$1\")"
+      julia -e "using Pluto; Pluto.run(notebook=\"$1\"; require_secret_for_open_links=false, require_secret_for_access=false)" 
 else
     echo "Error: too many arguments. 'pluto' takes zero or one arguments." 
     echo "Usage:"

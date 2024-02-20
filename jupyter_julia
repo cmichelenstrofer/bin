@@ -1,0 +1,12 @@
+#!/usr/bin/env bash
+
+if [ $# -eq 0 ]
+  then
+    julia -e "using IJulia; notebook()"
+else
+    echo "Error: too many arguments. 'pluto' takes no arguments." 
+    echo "Usage:"
+    echo "    \$ jupyter_julia"
+    exit 1
+fi
+

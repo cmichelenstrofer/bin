@@ -1,0 +1,4 @@
+#!/usr/bin/env bash
+
+# copy large files through SSH
+rsync -P --rsh=ssh
